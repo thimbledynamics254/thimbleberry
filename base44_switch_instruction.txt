@@ -1,0 +1,12 @@
+BASE44 MIGRATION
+
+Replace direct Gemini calls with:
+
+Base URL: https://api.thimbleberry.com/v1
+Auth: Authorization: Bearer ${THIMBLEBERRY_API_KEY}
+Chat: POST /ai/chat
+
+Body:
+{"message":"<user message>","conversation_id":"<id or null>","model":"thimble-ai"}
+
+Store THIMBLEBERRY_API_KEY only as a secure server-side secret. Do not expose it in frontend code.
